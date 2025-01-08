@@ -3,6 +3,7 @@
 #define CAZLIB_H
 
 #include <stdio.h>
+#include <stddef.h>
 
 typedef struct {
     size_t rows;
@@ -12,8 +13,22 @@ typedef struct {
 
 typedef caz_mat* Matrix;
 
+/* 
+    Create Matrices
+*/
 Matrix newCazMatrix(size_t rows, size_t cols);
 void freeCazMatrix(Matrix *mat);
+Matrix newIdentityMatrix(size_t size);
+
+/*
+    Print Matrices
+*/
 void PrintMatrix(Matrix mat);
+
+/*
+    Basic Matrix Operations
+*/
+Matrix addMatrix(Matrix mat1, Matrix mat2);
+Matrix subtractMatrix(Matrix mat1, Matrix mat2);
 
 #endif // CAZLIB_H
