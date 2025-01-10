@@ -11,12 +11,14 @@ void FillMatrix(Matrix mat){
 
 int main() {
     printf("Hello, World!\n");
-    Matrix mat = newCazMatrix(3, 3);
+    Matrix mat = newCazMatrix(3, 1);
+    Matrix mat2 = newCazMatrix(1, 3);
     Matrix id = newIdentityMatrix(3);
     FillMatrix(mat);
+    FillMatrix(mat2);
     PrintMatrix(id);
     PrintMatrix(mat);
-    PrintMatrix(subtractMatrix(mat, id));
+    PrintMatrix(dotProduct(mat, mat2));
     freeCazMatrix(&mat);
     return 0;
 }

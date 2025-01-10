@@ -77,3 +77,26 @@ Matrix subtractMatrix(Matrix mat1, Matrix mat2){
     }
     return result;
 }
+
+/* 
+    Dot and Cross Product
+*/
+
+Matrix dotProduct(Matrix mat1, Matrix mat2){
+    // Check if the number of columns in the first matrix is equal to the number of rows in the second matrix
+    if(mat1 -> cols != mat2 -> rows){
+        printf("Error: The number of columns in the first matrix must be equal to the number of rows in the second matrix.\n");
+        return 0;
+    }
+    Matrix result = newCazMatrix(mat1 -> rows, mat2 -> cols);
+    for (int i = 0; i < mat1->rows; i++) {
+        for(int j = 0; j < mat2->cols; j++) {
+            result->data[i][j] = 0;
+            for(int k = 0; k < mat1->cols; k++)
+                result->data[i][j] += mat1->data[i][k] * mat2->data[k][j];
+                printf("%0.3f ", result->data[i][j]);
+                printf("test\n");
+        }
+    }
+    return result;
+}

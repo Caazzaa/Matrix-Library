@@ -31,4 +31,10 @@ void PrintMatrix(Matrix mat);
 Matrix addMatrix(Matrix mat1, Matrix mat2);
 Matrix subtractMatrix(Matrix mat1, Matrix mat2);
 
+
+/*
+    Advanced Matrix Operations
+*/
+Matrix dotProduct(Matrix mat1, Matrix mat2);
+
 #endif // CAZLIB_H
