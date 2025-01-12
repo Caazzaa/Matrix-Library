@@ -25,11 +25,18 @@ Matrix newIdentityMatrix(size_t size);
 */
 void PrintMatrix(Matrix mat);
 
+float square_root(float number);
+int pow(int base, int exp);
+
 /*
     Basic Matrix Operations
 */
 Matrix addMatrix(Matrix mat1, Matrix mat2);
 Matrix subtractMatrix(Matrix mat1, Matrix mat2);
+Matrix scalarMultiplication(double scalar, Matrix mat);
+Matrix scalarDivision(double scalar, Matrix mat);
+double vectorMagnitude(Matrix vector);
+Matrix unitVector(Matrix vector);
 
 
 /*
